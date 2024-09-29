@@ -1,0 +1,36 @@
+Automatizacion Flujo de Compra en Saucedemo
+Hallazgos
+Flujo de Compra Funcional:
+El flujo de compra desde la autenticación hasta la confirmación fue exitoso. La página respondió correctamente a cada acción automatizada.
+Texto de Confirmación:
+Se esperaba que el mensaje de confirmación incluyera un signo de exclamación, es decir, "THANK YOU FOR YOUR ORDER!", pero el mensaje mostrado fue "THANK YOU FOR YOUR ORDER" (sin el signo de exclamación). Este detalle es menor y no afecta el funcionamiento del flujo.
+Estabilidad:
+No se encontraron problemas de estabilidad en la plataforma. Todos los pasos se completaron dentro de los tiempos esperados.
+Conclusiones
+Flujo Completado Exitosamente: El proceso de compra es funcional y permite completar la transacción sin errores.
+Discrepancia en el Mensaje: El mensaje de confirmación presenta una leve diferencia respecto al esperado (falta de un signo de exclamación).
+Posibles Mejoras: Se podría aumentar la cobertura de pruebas para validar diferentes roles de usuario o flujos de compra con distintas combinaciones de productos.
+
+Karate Pruebas de Servicios REST - PetStore API
+Hallazgos
+Añadir una Mascota:
+
+Entrada: Se envió una solicitud POST con los detalles de una nueva mascota. El ID generado fue el 1, con el nombre "MascotaPrueba" y estado "available".
+Salida: La API respondió con un código de estado 200, indicando que la mascota fue añadida correctamente.
+Consultar la Mascota por ID:
+
+Entrada: Solicitud GET para buscar la mascota con ID 1.
+Salida: La API devolvió los detalles correctos de la mascota agregada anteriormente, con estado 200.
+Actualizar el Nombre y el Estatus de la Mascota:
+
+Entrada: Solicitud PUT para actualizar el nombre de la mascota a "MascotaActualizada" y cambiar el estatus a "sold".
+Salida: La API respondió correctamente con un estado 200, confirmando la actualización.
+
+Consultar la Mascota por Estatus (sold):
+Entrada: Solicitud GET para buscar mascotas con el estatus "sold".
+Salida: La API devolvió correctamente la mascota actualizada en el estado solicitado, con código de estado 200.
+
+Conclusiones
+Flujo Completado Exitosamente: Todas las pruebas se realizaron correctamente. La API de PetStore funcionó como se esperaba en cada uno de los casos probados.
+Validación de Estado: La API respondió consistentemente con los códigos de estado correctos, validando la funcionalidad de añadir, consultar, actualizar y buscar mascotas.
+Mejoras: Se podría ampliar el rango de pruebas para verificar otros escenarios como el manejo de errores, restricciones de datos, y pruebas de carga para garantizar la estabilidad bajo tráfico pesado.
